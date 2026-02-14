@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("acceuil.jpeg");
+    background-size: cover;         /* Couvre tout l'écran */
+    background-position: center;    /* Centre l'image */
+    background-repeat: no-repeat;   /* Pas de répétition */
+    background-attachment: fixed;   /* Reste fixe au scroll (optionnel) */
+}
+
+.home {
+    margin-left: 40%;
+    margin-top: 60px;
+    flex: 1; /* prend tout l'espace disponible */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.demande{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font: 900;
+    color: #fffeff;
+}
+
+.yes-no-buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 80px;             /* espace entre Oui et Non */
+    justify-content: center;
+    margin: 15px 0;
+}
+
+
+#btnNon{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #d8b4c6;
+    color: white;
+    transition: 0.3s;
+}
+
+#btnOui {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* bouton arrondi */
+    cursor: pointer;
+    
+    background: linear-gradient(45deg, #ff4da6, #ff99cc);
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    transition: all 0.3s ease;
+}
+
+#btnOui:hover {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 0 25px #ec48b3,
+                0 0 50px #714dff,
+                0 0 100px #4dff8eaa;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#gallery{
+    background: linear-gradient(135deg, #aa6c7d 0%, #a07681 100%);
+    color: rgb(38, 3, 3);
+    font-family: 'Pacifico', cursive; /* Police romantique */
+    font-size: 20px;
+    padding: 15px 40px;
+    border: 3px solid rgb(245, 243, 243);
+    border-radius: 50px; /* Bouton arrondi */
+    box-shadow: 0 8px 20px rgba(158, 86, 110, 0.4);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#gallery:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 25px #e26767,
+                0 0 50px #0c0264,
+                0 0 100px #034e1eaa;
+}
+
+.bisou-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.bisou {
+    width: 50%;
+    height: auto;        /* ← plus petit */
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff4d6daa;
+    flex-shrink: 1;
+    min-width: 0;
+    opacity: 0.8;
+}
+
+/* Animation lettre qui tombe */
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#homeTitle span {
+    display: inline-block;
+    opacity: 0;
+    animation: drop 0.6s forwards;
+}
+
+#homeTitle{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: #f30505;
+}
+
+.question{
+    width: 600px;
+    height: 500px;
+    padding: 30px 20px;
+    display: flex;
+    border: none;
+    border-radius: 20%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(185, 50, 187, 0.5);
+    animation: breathe 2.5s ease-in-out infinite;
+    overflow: hidden;     /* ← empêche tout débordement */
+    padding-bottom: 10px;
+}
+
+@keyframes breathe {
+    0%   { box-shadow: 0 0 5px #ff4d4d,  0 0 10px #ffe14daa; }
+    50%  { box-shadow: 0 0 20px #2dc250, 0 0 40px #4de4ff, 0 0 80px #594dffaa; }
+    100% { box-shadow: 0 0 5px #be4dff,  0 0 10px #cf0a0aaa; }
+}
+
+p{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: cadetblue;
+}
+
+/********************************************************************/
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/*
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* assombrit la vidéo *
+    z-index: -1;
+}*/
+
+
+/* Modal background */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 50%;          /* ← réduit la largeur */
+    max-width: 400px;    /* ← taille maximum */
+    max-height: 80vh;    /* ← ne dépasse pas 80% de l'écran */
+}
+
+.modal video {
+    width: 100%;
+    max-height: 70vh;    /* ← la vidéo ne dépasse pas l'écran */
+    border-radius: 15px;
+    object-fit: contain; /* ← garde les proportions */
+}
+
+.close {
+    position: absolute;
+    top: -35px;          /* ← bien au dessus de la vidéo */
+    right: 0;
+    font-size: 40px;     /* ← plus grand pour être cliquable */
+    color: white;
+    cursor: pointer;
+    z-index: 11;         /* ← toujours au dessus de tout */
+    background: rgba(0,0,0,0.5);  /* ← fond sombre pour le voir */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*****************************************************************************************************/
+
+#videoChoix h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+.video-liste {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4d6daa;
+    border-radius: 10px;
+}
+
+.video-card video {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    pointer-events: none; /* empêche le clic sur la vidéo elle même */
+}
+
+.video-card p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: white;
+}
+
+#btnRetour {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#btnRetour:hover {
+    background: rgba(255,255,255,0.2);
+}
