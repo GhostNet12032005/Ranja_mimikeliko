@@ -12,12 +12,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-
-    background-image: url("acceuil.jpeg");
-    background-size: cover;         /* Couvre tout l'écran */
-    background-position: center;    /* Centre l'image */
-    background-repeat: no-repeat;   /* Pas de répétition */
-    background-attachment: fixed;   /* Reste fixe au scroll (optionnel) */
 }
 
 .home {
@@ -187,7 +181,7 @@ p{
     object-fit: cover;
     z-index: -1;
 }
-/*
+
 body::before {
     content: "";
     position: fixed;
@@ -195,9 +189,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* assombrit la vidéo *
+    background: rgba(0, 0, 0, 0.6); /* assombrit la vidéo */
     z-index: -1;
-}*/
+}
 
 
 /* Modal background */
@@ -301,4 +295,149 @@ body::before {
 
 #btnRetour:hover {
     background: rgba(255,255,255,0.2);
+}
+
+
+/*************************************************************************/
+
+/* Centrage du background vidéo pour tous les écrans */
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    
+    /* Home page */
+    .home {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .question {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        min-height: 400px;
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    
+    #homeTitle {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .demande {
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .bisou-container {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .bisou {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .yes-no-buttons {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    
+    #btnOui, #btnNon {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+    
+    #gallery {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    
+    p {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    /* Modal vidéo */
+    .modal-content {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    .modal video {
+        max-height: 60vh;
+    }
+    
+    .close {
+        top: -40px;
+        font-size: 35px;
+    }
+    
+    /* Choix de vidéos */
+    #videoChoix h3 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    
+    .video-liste {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .video-card video {
+        width: 200px;
+        height: 130px;
+    }
+    
+    .video-card p {
+        font-size: 16px;
+    }
+}
+
+/* Pour très petits écrans (téléphones en portrait) */
+@media (max-width: 480px) {
+    #homeTitle {
+        font-size: 24px;
+    }
+    
+    .demande {
+        font-size: 26px;
+    }
+    
+    .question {
+        width: 95%;
+        padding: 15px 10px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+    
+    #btnOui, #btnNon {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    #gallery {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
 }

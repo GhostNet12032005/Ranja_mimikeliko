@@ -78,15 +78,32 @@ if (closeBtn && modal && video) {
 }
 
 const btnNon = document.getElementById('btnNon');
+
+// Fonction pour faire fuir le bouton
+function faireFuirBouton() {
+    const maxX = window.innerWidth - btnNon.offsetWidth - 20;
+    const maxY = window.innerHeight - btnNon.offsetHeight - 20;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    btnNon.style.position = 'fixed';
+    btnNon.style.left = randomX + 'px';
+    btnNon.style.top = randomY + 'px';
+}
+
 if (btnNon) {
-    btnNon.addEventListener('mouseover', () => {
-        const maxX = window.innerWidth - btnNon.offsetWidth - 20;
-        const maxY = window.innerHeight - btnNon.offsetHeight - 20;
-        const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
-        btnNon.style.position = 'fixed';
-        btnNon.style.left = randomX + 'px';
-        btnNon.style.top = randomY + 'px';
+    // Sur ordinateur (avec souris)
+    btnNon.addEventListener('mouseover', faireFuirBouton);
+    
+    // Sur mobile (avec toucher/clic)
+    btnNon.addEventListener('click', (e) => {
+        e.preventDefault(); // Empêche le comportement par défaut
+        faireFuirBouton();
+    });
+    
+    // Bonus : aussi au toucher (touchstart est plus rapide que click sur mobile)
+    btnNon.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        faireFuirBouton();
     });
 }
 
