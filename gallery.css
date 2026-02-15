@@ -95,6 +95,7 @@
     padding-bottom: 50px;
     transition: all 0.3s ease;
     opacity: 0.7;
+    display: block;
 }
 
 #muah:hover{
@@ -105,6 +106,7 @@
     opacity: 1;
 }
 .head-gallery{
+    position: relative; 
     padding-top: 50px;
     padding-left: 100px;
     margin-left: 20%;
@@ -115,6 +117,27 @@
     background-color: rgba(33, 60, 135, 0.5);
     border-radius: 10%;
 }
+
+.texte{
+    
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#muah:hover + .texte{
+    opacity: 1;
+}
+
 
 h1 {
     color: rgb(0, 0, 0);
@@ -248,9 +271,11 @@ h1 {
     }
     
     #muah {
-        width: 250px;
+        width: 70%;
+        height: auto;
+        object-fit: cover;
         padding-bottom: 30px;
-        margin-left: 25%;
+        margin-left: 13%;
     }
     
     #popupImg {
