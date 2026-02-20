@@ -23,7 +23,7 @@ let correctPass = "8d025099d5d35d6ec264be641cfe83b200f15aeeef72ea0f5cc7352d0574e
 if(userHash === correctUser && passHash === correctPass)
 {
     sessionStorage.setItem("loggedIn","true");
-    window.location.href = "journal.html";
+    window.location.href = "gallery.html";
 }
 else
 {
