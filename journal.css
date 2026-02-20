@@ -1,0 +1,126 @@
+body{
+    background-color: black;
+}
+.jour1{
+    background-image: url("fondJournal.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    width: 1350px;
+    height: 2700px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.note1{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.jour2{
+    background-image: url("fondJournal.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 400px;
+    width: 1350px;
+    height: 1800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.note2{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.jour3{
+    background-image: url("fondJournal.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 400px;
+    width: 1350px;
+    height: 1800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.note3{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.jour4{
+    background-image: url("fondJournal.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 400px;
+    width: 1350px;
+    height: 1800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.note4{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.journal2 , .journal3 {
+    font-size: 30px;
+}
+
+.journal4{
+    font-size: 23px;
+}
+
+.resumerHistoire{
+    background-color: rgba(214, 196, 95, 0.2);
+    width: 80%;
+    height: auto;
+    margin: 30px;
+    padding: 20px;
+}
+
+.defaut{
+    background-color: rgba(210, 45, 45, 0.2);
+    width: 80%;
+    height: auto;
+    margin: 30px;
+    padding: 20px;
+}
+
+p{
+    color: white;
+    font-size: 15px;
+}
+
+h1{
+    background-color: rgba(183, 169, 169, 0.2);
+    color: rgb(219, 168, 168);
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+a{
+    width: 200px;
+    height: auto;
+    text-decoration: none;
+    background-color: aqua;
+}
