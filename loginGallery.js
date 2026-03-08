@@ -7,7 +7,6 @@ async function sha256(message) {
 }
 
 document.getElementById("loginForm").addEventListener("submit", async function(e){
-
 e.preventDefault();
 
 let user = document.getElementById("username").value;
