@@ -81,6 +81,30 @@ body{
     margin-left: 5%;
 }
 
+.jour5{
+    background-image: url("fondJournal.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 400px;
+    width: 1350px;
+    height: 1800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.note5{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.journal5{
+    font-size: 23px;
+}
+
 .journal2 , .journal3 {
     font-size: 30px;
 }
